@@ -5,9 +5,20 @@
 @layer base {
   @font-face {
     font-family: "Futura PT Web Cond Bold";
-    font-weight: 400;
-    src: url("Futura-PT-Web-Cond-Bold.ttf") format("truetype"),
-      url("Futura-PT-Web-Cond-Bold.woff2") format("woff2"),
-      url("Futura-PT-Web-Cond-Bold.woff") format("woff");
+    font-weight: 300;
+    src: url("/fonts/Futura-PT-Web-Cond-Bold.ttf") format("truetype"),
+      url("/fonts/Futura-PT-Web-Cond-Bold.woff2") format("woff2"),
+      url("/fonts/Futura-PT-Web-Cond-Bold.woff") format("woff");
   }
+  @font-face {
+    font-family: "Futura PT Web Cond Bold";
+    font-weight: 400;
+    src: url("/fonts/Futura-PT-Web-Cond-Bold.ttf") format("truetype"),
+      url("/fonts/Futura-PT-Web-Cond-Bold.woff2") format("woff2"),
+      url("/fonts/Futura-PT-Web-Cond-Bold.woff") format("woff");
+  }
+}
+
+body {
+  @apply font-futura font-light;
 }

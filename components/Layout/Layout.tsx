@@ -1,5 +1,6 @@
-import Footer from "@components/Footer";
 import React, { FC } from "react";
+import s from "./Layout.module.css";
+import Footer from "@components/Footer";
 
 interface Props {
   children: React.ReactNode | string;
@@ -7,8 +8,8 @@ interface Props {
 
 const Layout: FC<Props> = ({ children }) => {
   return (
-    <div>
-      <main>{children}</main>
+    <div className={s.root}>
+      <main className={s.main}>{children}</main>
       <Footer />
     </div>
   );
