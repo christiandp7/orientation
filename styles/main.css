@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Futura PT Web Cond Bold";
+    font-weight: 400;
+    src: url("Futura-PT-Web-Cond-Bold.ttf") format("truetype"),
+      url("Futura-PT-Web-Cond-Bold.woff2") format("woff2"),
+      url("Futura-PT-Web-Cond-Bold.woff") format("woff");
+  }
+}
