@@ -1,11 +1,13 @@
 import React, { FC, useState } from 'react'
 import cn from 'classnames'
 import s from './PlaceInput.module.css'
-
 import PlacesAutocomplete, {
 	geocodeByAddress,
 	getLatLng,
 } from 'react-places-autocomplete'
+import SuggestionItem from '@components/SuggestionItem'
+import { LocationIcon } from '@components/svg'
+import Loader from 'react-loader-spinner'
 
 const PlaceInput = () => {
 	const [address, setaddress] = useState('')
@@ -41,28 +43,26 @@ const PlaceInput = () => {
 								className: s.inputBox,
 							})}
 						/>
-						<div className={s.dropdownContainer}>
-							{loading && <div>Loading...</div>}
-							{suggestions.map(suggestion => {
-								const className = suggestion.active
-									? cn(s.suggestion, s.suggestionActive)
-									: s.suggestion
-								// inline style for demonstration purpose
-								const style = suggestion.active
-									? { backgroundColor: '#fafafa', cursor: 'pointer' }
-									: { backgroundColor: '#ffffff', cursor: 'pointer' }
-								return (
-									<div key={suggestion.id}>
-										<div
-											{...getSuggestionItemProps(suggestion, {
-												className,
-												style,
-											})}>
-											<span>{suggestion.description}</span>
-										</div>
-									</div>
-								)
-							})}
+						<div className={s.inputIcon}>
+							{loading ? (
+								<Loader type="Oval" color="#AAAAAA" width={18} height={18} />
+							) : (
+								<LocationIcon />
+							)}
+						</div>
+						<div
+							className={cn(s.dropdownContainer, {
+								[s.dropDownOpen]: suggestions.length > 0,
+							})}>
+							{suggestions.map(suggestion => (
+								<SuggestionItem
+									{...getSuggestionItemProps(suggestion, {
+										key: suggestion.id,
+										suggestion,
+										loading,
+									})}
+								/>
+							))}
 						</div>
 					</div>
 				)}
