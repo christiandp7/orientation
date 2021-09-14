@@ -15,12 +15,13 @@ class MyDocument extends Document {
 	render() {
 		return (
 			<Html>
-				<Head />
+				<Head>
+					<script
+						src={`https://maps.googleapis.com/maps/api/js?key=${process.env.PLACES_API_KEY}&libraries=places`}></script>
+				</Head>
 				<body>
 					<Main />
 					<NextScript />
-					<script
-						src={`https://maps.googleapis.com/maps/api/js?key=${process.env.PLACES_API_KEY}&libraries=places`}></script>
 				</body>
 			</Html>
 		)
