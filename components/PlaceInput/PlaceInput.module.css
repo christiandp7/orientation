@@ -1,0 +1,43 @@
+.root {
+	@apply flex flex-col items-center justify-center;
+	@apply w-full;
+}
+
+.labels {
+	letter-spacing: 0.2rem;
+	& p {
+		@apply text-center;
+	}
+}
+
+.inputContainer {
+	@apply relative w-full max-w-sm;
+	@apply mt-4;
+}
+
+.inputBox {
+	@apply w-full;
+	@apply bg-grayBg text-grayText;
+	@apply border-[1px] border-solid border-grayBorder;
+	@apply focus:border-primary focus:text-primary;
+	@apply px-6 py-1 text-center;
+	@apply outline-none;
+}
+
+.dropdownContainer {
+	@apply absolute left-0 top-full;
+	@apply w-full;
+	@apply border-l-[1px] border-r-[1px] border-b-[1px];
+	@apply border-primary border-solid;
+}
+
+.suggestion {
+	@apply px-4;
+}
+
+.suggestionActive {
+	@apply text-white;
+	& span {
+		@apply bg-primary;
+	}
+}

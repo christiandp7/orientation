@@ -2,9 +2,9 @@
   @apply w-full;
   @apply absolute bottom-0 left-0;
   @apply flex justify-between items-center;
-  @apply px-8 pb-5;
+  @apply px-10 pb-5;
 }
 
 .address {
-  @apply tracking-widest;
+  letter-spacing: 0.2rem;
 }
