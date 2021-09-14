@@ -18,6 +18,7 @@ class MyDocument extends Document {
 				<Head>
 					<script
 						async
+						type="text/javascript"
 						src={`https://maps.googleapis.com/maps/api/js?key=${process.env.PLACES_API_KEY}&libraries=places`}></script>
 				</Head>
 				<body>
