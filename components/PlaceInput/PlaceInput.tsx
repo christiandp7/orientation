@@ -52,13 +52,14 @@ const PlaceInput = () => {
 									? { backgroundColor: '#fafafa', cursor: 'pointer' }
 									: { backgroundColor: '#ffffff', cursor: 'pointer' }
 								return (
-									<div
-										{...getSuggestionItemProps(suggestion, {
-											className,
-											key: suggestion.id,
-											style,
-										})}>
-										<span>{suggestion.description}</span>
+									<div key={suggestion.id}>
+										<div
+											{...getSuggestionItemProps(suggestion, {
+												className,
+												style,
+											})}>
+											<span>{suggestion.description}</span>
+										</div>
 									</div>
 								)
 							})}
