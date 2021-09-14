@@ -11,18 +11,18 @@ const LocationIcon = () => {
 			<path
 				d="M8 8.666a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
 				stroke="#AAA"
-				stroke-opacity=".54"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeOpacity=".54"
+				strokeWidth="2"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			/>
 			<path
 				d="M8 1.333a5.333 5.333 0 0 0-5.333 5.334c0 1.26.268 2.086 1 3l4.333 5 4.333-5c.732-.914 1-1.74 1-3A5.333 5.333 0 0 0 8 1.333v0Z"
 				stroke="#AAA"
-				stroke-opacity=".54"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeOpacity=".54"
+				strokeWidth="2"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			/>
 		</svg>
 	)

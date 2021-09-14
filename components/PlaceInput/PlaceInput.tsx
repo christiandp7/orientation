@@ -55,13 +55,14 @@ const PlaceInput = () => {
 								[s.dropDownOpen]: suggestions.length > 0,
 							})}>
 							{suggestions.map(suggestion => (
-								<SuggestionItem
-									{...getSuggestionItemProps(suggestion, {
-										key: suggestion.id,
-										suggestion,
-										loading,
-									})}
-								/>
+								<React.Fragment key={suggestion.id}>
+									<SuggestionItem
+										{...getSuggestionItemProps(suggestion, {
+											suggestion,
+											loading,
+										})}
+									/>
+								</React.Fragment>
 							))}
 						</div>
 					</div>
