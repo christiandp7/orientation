@@ -18,9 +18,9 @@ class MyDocument extends Document {
 				<Head />
 				<body>
 					<Main />
+					<NextScript />
 					<script
 						src={`https://maps.googleapis.com/maps/api/js?key=${process.env.PLACES_API_KEY}&libraries=places`}></script>
-					<NextScript />
 				</body>
 			</Html>
 		)
